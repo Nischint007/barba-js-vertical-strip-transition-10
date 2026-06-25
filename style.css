@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #111;
+}
+
+.page {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+[data-barba="container"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+[data-barba="wrapper"] {
+  position: relative;
+  overflow: hidden;
+}
+
+[data-barba-namespace="home"] {
+  background-image: url("https://i.pinimg.com/736x/2d/5c/94/2d5c946bf7c01b6b58349b444cf58a38.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+[data-barba-namespace="about"] {
+  background-image: url("https://i.pinimg.com/736x/6c/8d/ac/6c8dacbbed00ac74236bd9e141c50d98.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+[data-barba-namespace="contact"] {
+  background-image: url("https://i.pinimg.com/736x/eb/d4/66/ebd46647356d392681a2797b826feda6.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+nav {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  width: 100%;
+  height: 10vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1vw;
+}
+
+#nav-left {
+  cursor: pointer;
+  font-size: 1.5vw;
+  font-family: fantasy;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: capitalize;
+  font-weight: bold;
+  color: #fff;
+}
+
+#nav-right {
+  width: 20vw;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#nav-right a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.5vw;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 15vw;
+  font-family: Arial, Helvetica, sans-serif;
+  white-space: nowrap;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: -0.04em;
+}
+
+#overlay {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+  z-index: 9999;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.block {
+  background: #FCC6FF;
+  margin: -0.5px;
+  will-change: transform, clip-path;
+  transform: translateZ(0);
+  min-width: 100%;
+  min-height: 100%;
+}
